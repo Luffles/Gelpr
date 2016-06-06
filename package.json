@@ -11,7 +11,7 @@
     "url": "github.com/luffles/gelpr"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",

@@ -4,6 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
+    "start": "NODE_ENV=development ./node_modules/.bin/hjs-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

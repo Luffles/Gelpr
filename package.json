@@ -11,7 +11,7 @@
     "type": "git",
     "url": "github.com/luffles/gelpr"
   },
-  "author": "",
+  "author": "Alan Johnston",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.6",

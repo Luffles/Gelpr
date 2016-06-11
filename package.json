@@ -32,6 +32,7 @@
     "expect": "^1.20.1",
     "file-loader": "^0.8.5",
     "hjs-webpack": "^8.2.0",
+    "json-loader": "^0.5.4",
     "mocha": "^2.5.3",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",

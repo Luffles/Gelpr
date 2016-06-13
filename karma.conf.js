@@ -13,17 +13,22 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai'],
     webpack: webpackConfig,
+
     webpackServer: {
       noInfo: true
-    },
-    plugins: [
-      'karma-mocha',
-      'karma-chai',
-      'karma-webpack'
-    ],
+  },
+  plugins: [
+  'karma-mocha',
+  'karma-chai',
+  'karma-webpack'
+  'karma-phantomjs-launcher',
+  'karma-spec-reporter',
+  'karma-sourcemap-loader'
+  ],
 
     // list of files / patterns to load in the browser
     files: [
+    'tests.webpack.js'
     ],
 
 
@@ -35,13 +40,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'tests.webpack.js': ['webpack', 'sourcemap']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['spec'],
 
 
     // web server port
@@ -63,7 +69,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
@@ -73,5 +79,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+})
 }

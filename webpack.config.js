@@ -17,13 +17,18 @@ const src     = join(root, 'src');
 const modules = join(root, 'node_modules');
 const dest    = join(root, 'dist');
 
-
 var config = getConfig({
-  isDev: isDev,
+  isDev,
   in: join(src, 'app.js'),
   out: dest,
   clearBeforeBuild: true
-})
+});
+
+config.externals = {
+  'react/lib/ReactContext': true,
+  'react/lib/ExecutionEnvironment': true,
+  'react/addons': true
+}
 
 
 // ENV variables

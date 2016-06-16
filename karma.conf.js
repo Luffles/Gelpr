@@ -1,5 +1,6 @@
 // Karma configuration
 // Generated on Sun Jun 12 2016 11:50:59 GMT+0700 (ICT)
+var path = require('path');
 var webpackConfig = require('./webpack.config');
 
 module.exports = function(config) {
@@ -20,7 +21,7 @@ module.exports = function(config) {
   plugins: [
   'karma-mocha',
   'karma-chai',
-  'karma-webpack'
+  'karma-webpack',
   'karma-phantomjs-launcher',
   'karma-spec-reporter',
   'karma-sourcemap-loader'

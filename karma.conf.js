@@ -1,5 +1,7 @@
 var path = require('path');
 var webpackConfig = require('./webpack.config');
+var argv = require('yargs').argv;
+
 
 module.exports = function(config) {
   config.set({
@@ -32,6 +34,7 @@ module.exports = function(config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    browsers: ['PhantomJS']
+    browsers: ['PhantomJS'],
+    singleRun: !argv.watch
   })
 };

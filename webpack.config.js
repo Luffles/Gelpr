@@ -14,8 +14,6 @@ const path    = require('path'),
 
 const getConfig = require('hjs-webpack');
 
-
-
 const root    = resolve(__dirname);
 const src     = join(root, 'src');
 const modules = join(root, 'node_modules');
@@ -31,7 +29,8 @@ var config = getConfig({
 if (isTest) {
   config.externals = {
     'react/lib/ReactContext': true,
-    'react/lib/ExecutionEnvironment': true
+    'react/lib/ExecutionEnvironment': true,
+    'react/addons': true
   }
 
   config.plugins = config.plugins.filter(p => {

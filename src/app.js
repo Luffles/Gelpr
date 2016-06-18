@@ -6,6 +6,18 @@ import './app.css'
 
 import {browserHistory, Router, Route} from 'react-router'
 
+const Home = React.createClass({
+  render: function() {
+    return (<div>Hello world</div>)
+  }
+})
+
+const routes = (
+  <Router>
+    <Route path="/" component={Home} />
+  </Router>
+)
+
 import App from 'containers/App/App'
 
 const mountNode = document.querySelector('#root');

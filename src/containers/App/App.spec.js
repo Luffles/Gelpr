@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import App from './App'
 import styles from './styles.module.css'
 
-describe('<App />', function () {
+describe('<App />', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<App />)

@@ -8,10 +8,10 @@ class App extends React.Component {
   }
 
   static propTypes = {
-    routes: PropTypes.element.isRequired,
-    history: PropTypes.object.isRequired
+    history: PropTypes.object.isRequired,
+    routes: PropTypes.element.isRequired
   };
-  // class getter
+
   get content() {
     return (
       <Router

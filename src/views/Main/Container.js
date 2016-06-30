@@ -40,6 +40,7 @@ export class Container extends React.Component {
           google={this.props.google}
           onReady={this.onReady.bind(this)}
           visible={false}>
+ {/*         className={styles.wrapper}>*/}
           <Header />
           <div className={styles.content}>
           {this.state.places.map(place => {
